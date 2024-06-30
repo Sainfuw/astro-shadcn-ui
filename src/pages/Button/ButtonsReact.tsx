@@ -1,5 +1,5 @@
+import { Button } from "@/components/ui/button";
 import { ChevronRightIcon, EnvelopeOpenIcon, ReloadIcon } from "@radix-ui/react-icons";
-import { Button } from "../ui/button";
 
 export function ButtonsReact() {
   return (
