@@ -1,7 +1,8 @@
 ---
-
+import { ModeToggle } from "./ModeToggle";
 ---
 
-<nav class="py-8 text-center">
+<nav class="max-w-3xl m-auto py-8 flex justify-between">
   <a href="/" class="text-3xl font-bold">Shadcn/ui with Astro</a>
+  <ModeToggle client:load />
 </nav>
