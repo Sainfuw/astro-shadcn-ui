@@ -17,6 +17,9 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.11.3(typescript@5.5.2))(tailwindcss@3.4.4)
+      '@astropub/md':
+        specifier: ^0.4.0
+        version: 0.4.0(@astrojs/markdown-remark@5.1.1)
       '@radix-ui/react-accordion':
         specifier: ^1.2.0
         version: 1.2.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -137,6 +140,11 @@ packages:
   '@astrojs/telemetry@3.1.0':
     resolution: {integrity: sha512-/ca/+D8MIKEC8/A9cSaPUqQNZm+Es/ZinRv0ZAzvu2ios7POQSsVD+VOj7/hypWNsNM3T7RpfgNq7H2TU1KEHA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
+
+  '@astropub/md@0.4.0':
+    resolution: {integrity: sha512-f0kJIfywRKLcVqlizqUPModBBuJ7WwBEIWJEt1Eq/ksSYixtOl8HQWMZKJhv9Xtc9OKHhkQf0AQc56EV1xNUnw==}
+    peerDependencies:
+      '@astrojs/markdown-remark': ^4
 
   '@babel/code-frame@7.24.7':
     resolution: {integrity: sha512-BcYH1CVJBO9tvyIZ2jVeXgSIMvGZ2FDRvDdOIVQyuklNKSsx+eppDEBq/g47Ayw+RqNFE+URvOShmf+f/qwAlA==}
@@ -2771,6 +2779,10 @@ snapshots:
       which-pm-runs: 1.1.0
     transitivePeerDependencies:
       - supports-color
+
+  '@astropub/md@0.4.0(@astrojs/markdown-remark@5.1.1)':
+    dependencies:
+      '@astrojs/markdown-remark': 5.1.1
 
   '@babel/code-frame@7.24.7':
     dependencies:

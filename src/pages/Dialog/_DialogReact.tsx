@@ -29,11 +29,14 @@ export function DialogReact() {
               id="link"
               value={text}
               onChange={(e) => setText(e.target.value)}
-            // defaultValue="https://ui.shadcn.com/docs/installation"
-            // readOnly
             />
           </div>
-          <Button type="submit" size="sm" className="px-3" onClick={() => navigator.clipboard.writeText(text)}>
+          <Button
+            type="submit"
+            size="sm"
+            className="px-3"
+            onClick={() => navigator.clipboard.writeText(text)}
+          >
             <span className="sr-only">Copy</span>
             <Copy className="h-4 w-4" />
           </Button>

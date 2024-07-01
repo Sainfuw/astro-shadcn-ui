@@ -1,9 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { jsxToTxt } from "@/lib/jsxToTxt";
+import { Markdown } from "@astropub/md";
 import { SelectReact } from "./_SelectReact";
 
-const text = jsxToTxt("Select");
+const text = await jsxToTxt("Select");
 ---
 
 <Layout title="Select">
@@ -12,6 +13,6 @@ const text = jsxToTxt("Select");
     <SelectReact client:load />
 
     <h3 class="text-2xl font-bold">Code</h3>
-    <pre>{text}</pre>
+    <Markdown of={text} />
   </div>
 </Layout>
