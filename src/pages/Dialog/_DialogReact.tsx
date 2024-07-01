@@ -3,8 +3,11 @@ import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, Di
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Copy } from "lucide-react";
+import { useState } from "react";
 
 export function DialogReact() {
+  const [text, setText] = useState("")
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -24,11 +27,13 @@ export function DialogReact() {
             </Label>
             <Input
               id="link"
-              defaultValue="https://ui.shadcn.com/docs/installation"
-              readOnly
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            // defaultValue="https://ui.shadcn.com/docs/installation"
+            // readOnly
             />
           </div>
-          <Button type="submit" size="sm" className="px-3" onClick={() => navigator.clipboard.writeText("https://ui.shadcn.com/docs/installation")}>
+          <Button type="submit" size="sm" className="px-3" onClick={() => navigator.clipboard.writeText(text)}>
             <span className="sr-only">Copy</span>
             <Copy className="h-4 w-4" />
           </Button>

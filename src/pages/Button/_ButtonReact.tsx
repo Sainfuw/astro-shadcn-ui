@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRightIcon, EnvelopeOpenIcon, ReloadIcon } from "@radix-ui/react-icons";
 
-export function ButtonsReact() {
+export function ButtonReact() {
   return (
     <div className="flex gap-2 flex-wrap">
       <Button onClick={() => alert("click")}>Click Me!</Button>
