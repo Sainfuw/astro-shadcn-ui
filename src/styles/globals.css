@@ -80,4 +80,6 @@ pre {
   padding-bottom: 20px;
   border-radius: 8px;
   padding-right: 40px;
+  max-width: 575px;
+  max-height: 575px;
 }
