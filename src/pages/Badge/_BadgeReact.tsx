@@ -3,10 +3,12 @@ import { Badge } from "@/components/ui/badge";
 export function BadgeReact() {
   return (
     <div className="flex gap-2 flex-wrap">
-      <Badge>Badge</Badge>
-      <Badge variant="secondary">Secondary</Badge>
-      <Badge variant="outline">Secondary</Badge>
-      <Badge variant="destructive">Secondary</Badge>
+      <Badge>primary</Badge>
+      <Badge variant="secondary">secondary</Badge>
+      <Badge variant="outline">outline</Badge>
+      <Badge variant="destructive">destructive</Badge>
+      <Badge variant="info">info</Badge>
+      <Badge capitalize variant="success">success</Badge>
     </div>
   )
 }

@@ -1,8 +1,12 @@
 ---
+import { AvatarReact } from "@/pages/Avatar/_AvatarReact";
 import { ModeToggle } from "./ModeToggle";
 ---
 
 <nav class="max-w-3xl m-auto py-8 flex justify-between">
   <a href="/" class="text-3xl font-bold">Shadcn/ui with Astro</a>
-  <ModeToggle client:load />
+  <div class="flex gap-4 items-center">
+    <ModeToggle client:load />
+    <AvatarReact client:load />
+  </div>
 </nav>
