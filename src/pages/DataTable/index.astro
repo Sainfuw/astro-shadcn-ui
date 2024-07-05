@@ -1,0 +1,24 @@
+---
+import { payments } from "@/data/payments";
+import Layout from "@/layouts/Layout.astro";
+import { jsxToTxt } from "@/lib/jsxToTxt";
+import { Markdown } from "@astropub/md";
+import { DataTableReact } from "./_DataTableReact";
+
+async function fetchData() {
+  return payments;
+}
+
+const data = await fetchData();
+const text = await jsxToTxt("DataTable");
+---
+
+<Layout title="Accordion">
+  <div class="flex flex-col gap-8">
+    <h3 class="text-2xl font-bold">Component</h3>
+    <DataTableReact client:load data={data} />
+
+    <h3 class="text-2xl font-bold">Code</h3>
+    <Markdown of={text} />
+  </div>
+</Layout>

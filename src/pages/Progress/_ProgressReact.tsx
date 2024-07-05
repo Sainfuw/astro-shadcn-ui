@@ -2,11 +2,16 @@ import { Progress } from "@/components/ui/progress"
 import { useEffect, useState } from "react"
 
 export function ProgressReact() {
-  const [progress, setProgress] = useState(13)
+  const [progress, setProgress] = useState(0)
 
   useEffect(() => {
-    const timer = setTimeout(() => setProgress(66), 500)
-    return () => clearTimeout(timer)
+    const animation = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) return 0
+        return prev + 1
+      })
+    }, 100)
+    return () => clearInterval(animation)
   }, [])
 
   return (

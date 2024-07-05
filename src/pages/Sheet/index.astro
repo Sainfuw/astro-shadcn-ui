@@ -1,0 +1,18 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { jsxToTxt } from "@/lib/jsxToTxt";
+import { Markdown } from "@astropub/md";
+import { SheetReact } from "./_SheetReact";
+
+const text = await jsxToTxt("Sheet");
+---
+
+<Layout title="Accordion">
+  <div class="flex flex-col gap-8">
+    <h3 class="text-2xl font-bold">Component</h3>
+    <SheetReact client:load />
+
+    <h3 class="text-2xl font-bold">Code</h3>
+    <Markdown of={text} />
+  </div>
+</Layout>

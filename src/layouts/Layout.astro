@@ -1,6 +1,8 @@
 ---
 import Nav from "@/components/Nav.astro";
 import "@/styles/globals.css";
+import { Toaster as SonnerToaster } from "@/components/ui/sonner";
+import { Toaster as RadixToaster } from "@/components/ui/toaster";
 
 interface Props {
   title: string;
@@ -26,6 +28,13 @@ const componentList = [
   "Command",
   "InputOTP",
   "Progress",
+  "Sheet",
+  "Skeleton",
+  "Slider",
+  "Sonner",
+  "Toast",
+  "Tabs",
+  "DataTable",
 ].sort((a, b) => a.localeCompare(b));
 ---
 
@@ -58,6 +67,8 @@ const componentList = [
       </ul>
       <div class="w-full">
         <slot />
+        <SonnerToaster client:load />
+        <RadixToaster client:load />
       </div>
     </main>
   </body>
